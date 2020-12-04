@@ -7,6 +7,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
     <title>MQLFX</title>
 </head>
+<script type="javascript">
+function submit() {
+ let form = document.forms.reg; 
+ let email = form.elements.mail.value();
+ let comment = form.elements.com.value();
+  if (email.length > 0 && (email.match(/.+?\@.+/g) || []).length !== 1 && comment.length > 0) {
+    alert('Некорректная заявка!');
+  } else {
+    alert('Заявка принята!');
+  }}
+</script>
 <body>
     <header class="header">
         <div class="container">
@@ -17,7 +28,7 @@
 
                <nav class="nav">
                     <a class="nav__link" href="index.html">На главную</a>
-                    <a class="nav__link" href="#">Контакты</a>
+                    <a class="nav__link" href="index.html#contacts">Контакты</a>
                 </nav>
            </div> 
         </div>
@@ -61,11 +72,12 @@
         </div>
     </div>
     <div>
-        <input type="email" class="order__mail" placeholder="email@example.com">
-        <textarea class="order__comment" placeholder="Comments..."></textarea>
-        <button class="order__btn">ОТПРАВИТЬ</button>
+        <form id="reg">
+        <input type="email" required name="mail" class="order__mail" placeholder="email@example.com">
+        <textarea class="order__comment" required name="com" placeholder="Comments..."></textarea>
+        <input type="submit" onclick="submit()" value="ОТПРАВИТЬ" class="order__btn">
+        </form>
     </div>
 </section>
 </body>
-<!-- <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
 </html>
