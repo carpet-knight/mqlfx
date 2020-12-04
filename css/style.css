@@ -258,3 +258,31 @@ p {
     width: 25%;
 
 }
+
+/* ============ Order =============== */
+
+.order__mail {
+    width: 20%;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.order__comment {
+    width: 20%;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    text-align: left;
+}
+
+.order__btn {
+    margin-top: 10px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
