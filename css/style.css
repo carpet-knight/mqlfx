@@ -271,6 +271,7 @@ p {
 }
 
 .order__comment {
+    resize: none;
     width: 20%;
     margin-top: 10px;
     display: block;
@@ -282,7 +283,69 @@ p {
 
 .order__btn {
     margin-top: 10px;
-    display: flex;
     margin-left: auto;
     margin-right: auto;
+    color: white;
+    text-align: center;
+    width: 200px;
+    height: 30px;
+    background-image: linear-gradient(315deg, rgba(115, 15, 79), rgba(21, 21, 146, 0.9) 65%);
+    border: none;
+    border-radius: 0px;
+    font-size: 17px;
+    font-weight: bold;
 }
+
+.order__btn:hover {
+    box-shadow: 0 13px 17px 0 rgba(0,0,0,0.25), 0 18px 51px 0 rgba(0,0,0,0.20);
+}
+
+.order__header {
+    font-size: 50px;
+    text-transform: uppercase;
+    background-image: linear-gradient(160deg, rgba(115, 15, 79), rgba(21, 21, 146, 0.9) 60%);
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 20px;
+}
+
+.custom-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  .custom-radio+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+
+  .custom-radio+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #9027a5;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+
+  .custom-radio:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #9027a5;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.363);
+  }
+
+  .custom-radio:checked+label::before {
+    border: 5px solid #9027a5;
+    background-color: #ffffff;
+  }
+
+  .custom-radio:disabled+label::before {
+    background-color: #e9ecef;
+    border: 2px solid #9027a5;
+  }
