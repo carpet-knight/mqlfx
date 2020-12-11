@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
     <title>MQLFX</title>
 </head>
+
 <body>
 
     <!-- Sprite -->
@@ -41,62 +45,76 @@
 
     <header class="header">
         <div class="container">
-           <div class="header__inner">
-               <div class="header__logo">
-                   <img src="img/logo.webp" alt="">
-               </div>
+            <div class="header__inner">
+                <div class="header__logo">
+                    <img src="img/logo.webp" alt="">
+                </div>
 
-               <nav class="nav">
-                    <a class="nav__link" href="index.html">На главную</a>
+                <nav id="menu" class="nav">
+                    <a class="nav__link" href="./index.html">На главную</a>
                     <a class="nav__link" href="#footer">Контакты</a>
                 </nav>
-           </div> 
+            </div>
         </div>
     </header>
 
 
-<section class="service">
-    <div class="container">
-        <h1 class="order__header">
-            Выберите услугу
-        </h1>
-        <div class="service__inner">
-            <div class="service__item">
-                <div class="service__icon"><img src="https://www.flaticon.com/svg/static/icons/svg/3362/3362252.svg"></div>
-                <div class="service__title">Торговый советник (АТС)</div>
-                <div class="service__price">от 5000 рублей</div>
-                <input type="radio" class="custom-radio" name="offer" id="1">
-                <label for="1"></label>
-            </div>
-            <div class="service__item">
-                <div class="service__icon"><img src="https://www.flaticon.com/svg/static/icons/svg/2329/2329530.svg"></div>
-                <div class="service__title">Индикатор</div>
-                <div class="service__price">от 3000 рублей</div>
-                <input type="radio" class="custom-radio" name="offer" id="2">
-                <label for="2"></label>
-            </div>
-            <div class="service__item">
-                <div class="service__icon"><img src="https://www.flaticon.com/svg/static/icons/svg/1119/1119024.svg"></div>
-                <div class="service__title">Скрипт</div>
-                <div class="service__price">от 1500 рублей</div>
-                <input type="radio" class="custom-radio" name="offer" id="3">
-                <label for="3"></label>
-            </div>
-            <div class="service__item">
-                <div class="service__icon"><img src="https://www.flaticon.com/svg/static/icons/svg/1848/1848755.svg"></div>
-                <div class="service__title">Консультация</div>
-                <div class="service__price">2500 рублей в час</div>
-                <input type="radio" class="custom-radio" name="offer" id="4">
-                <label for="4"></label>
-            </div>
+    <section class="service zero-margin-top">
+        
+        <div class="service__top">
+            <h1 class="service__header">Выберите услугу</h1>
         </div>
-    </div>
-    <div>
-        <input type="email" class="order__mail" placeholder="email@example.com">
-        <textarea class="order__comment" placeholder="Comments..."></textarea>
-        <button class="btn">ОТПРАВИТЬ</button>
-    </div>
-</section>
+        <div class="container">
+            <form method="POST">
+                <div class="service__inner">
+                    <label class="service__item card">
+                        <div class="service__icon">
+                            <img src="https://www.flaticon.com/svg/static/icons/svg/3362/3362252.svg">
+                        </div>
+                        <div class="service__title">Торговый советник (АТС)</div>
+                        <div class="service__price">от 5000 рублей</div>
+                        <input type="radio" class="custom-radio" name="offer" id="1" checked>
+                        <label for="1"></label>
+                    </label>
+                    <label class="service__item card">
+                        <div class="service__icon">
+                            <img src="https://www.flaticon.com/svg/static/icons/svg/2329/2329530.svg">
+                        </div>
+                        <div class="service__title">Индикатор</div>
+                        <div class="service__price">от 3000 рублей</div>
+                        <input type="radio" class="custom-radio" name="offer" id="2">
+                        <label for="2"></label>
+                    </label>
+                    <label class="service__item card">
+                        <div class="service__icon">
+                            <img src="https://www.flaticon.com/svg/static/icons/svg/1119/1119024.svg">
+                        </div>
+                        <div class="service__title">Скрипт</div>
+                        <div class="service__price">от 1500 рублей</div>
+                        <input type="radio" class="custom-radio" name="offer" id="3">
+                        <label for="3"></label>
+                    </label>
+                    <label class="service__item card">
+                        <div class="service__icon">
+                            <img src="https://www.flaticon.com/svg/static/icons/svg/1848/1848755.svg">
+                        </div>
+                        <div class="service__title">Консультация</div>
+                        <div class="service__price">2500 рублей в час</div>
+                        <input type="radio" class="custom-radio" name="offer" id="4">
+                        <label for="4"></label>
+                    </label>
+                </div>
+                <div class="order">
+                    <div class="order__inner">
+                        <input type="text" class="order__field" placeholder="Name" required>
+                        <input type="email" class="order__field" placeholder="email@example.com" required>
+                        <textarea class="order__field order__comment" placeholder="Comments..."></textarea>
+                        <button class="btn" type="submit">Отправить</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
 
 
     <!-- Footer -->
@@ -153,16 +171,20 @@
                 <div class="copyright__text">
                     <div>Copyright © 2020 MQLFX. All Rights Reserved.</div>
                     <div>Made with LOVE by Sanya & Vano.</div>
-                    <div>Icons made by <a class="footer__link" href="https://www.flaticon.com/authors/freepik"
-                            title="Freepik">Freepik</a> from <a class="footer__link" href="https://www.flaticon.com/"
-                            title="Flaticon">www.flaticon.com</a>
-                        </div>
+                    <div>Icons made by
+                        <a class="footer__link" href="https://www.flaticon.com/authors/freepik" title="Freepik"
+                            target="_blank">Freepik</a> from
+                        <a class="footer__link" href="https://www.flaticon.com/" title="Flaticon"
+                            target="_blank">www.flaticon.com</a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
     <!-- End Footer -->
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./main.js"></script>
 </body>
 
 </html>

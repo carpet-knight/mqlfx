@@ -1,14 +1,15 @@
-const root = $('html, body');
-
 $(document).ready(function () {
+    const root = $('html, body');
+    const headerHeight = Number.parseInt($('.header').css('height'));
+
     $("#menu").on("click", "a", function (event) {
-        event.preventDefault();
+        const href = $(this).attr('href');
 
-        const headerHeight = Number.parseInt($('.header').css('height'));
-
-        let id = $(this).attr('href'),
-            top = $(id).offset().top - headerHeight;
-        
-        root.animate({ scrollTop: top }, 800);
+        if (href.startsWith('#')) {
+            event.preventDefault();
+            
+            let top = $(href).offset().top - headerHeight;
+            root.animate({ scrollTop: top }, 800);
+        }
     });
 });
