@@ -8,7 +8,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:wght@300;400;600;700&display=swap"
         rel="stylesheet">
-    <title>MQLFX</title>
+    <title>Template</title>
 </head>
 
 <body>
@@ -47,7 +47,7 @@
         <div class="container">
             <div class="header__inner">
                 <div class="header__logo">
-                    <img src="img/logo.webp" alt="">
+                    <img src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo1.png" alt="">
                 </div>
 
                 <nav id="menu" class="nav">
@@ -60,7 +60,7 @@
 
 
     <section class="service zero-margin-top">
-        
+
         <div class="service__top">
             <h1 class="service__header">Выберите услугу</h1>
         </div>
@@ -73,7 +73,7 @@
                         </div>
                         <div class="service__title">Торговый советник (АТС)</div>
                         <div class="service__price">от 5000 рублей</div>
-                        <input type="radio" class="custom-radio" name="offer" id="1" checked>
+                        <input type="radio" class="custom-radio" name="offer" id="1" value="advisor" checked>
                         <label for="1"></label>
                     </label>
                     <label class="service__item card">
@@ -82,7 +82,7 @@
                         </div>
                         <div class="service__title">Индикатор</div>
                         <div class="service__price">от 3000 рублей</div>
-                        <input type="radio" class="custom-radio" name="offer" id="2">
+                        <input type="radio" class="custom-radio" name="offer" id="2" value="indicator">
                         <label for="2"></label>
                     </label>
                     <label class="service__item card">
@@ -91,7 +91,7 @@
                         </div>
                         <div class="service__title">Скрипт</div>
                         <div class="service__price">от 1500 рублей</div>
-                        <input type="radio" class="custom-radio" name="offer" id="3">
+                        <input type="radio" class="custom-radio" name="offer" id="3" value="script">
                         <label for="3"></label>
                     </label>
                     <label class="service__item card">
@@ -100,19 +100,21 @@
                         </div>
                         <div class="service__title">Консультация</div>
                         <div class="service__price">2500 рублей в час</div>
-                        <input type="radio" class="custom-radio" name="offer" id="4">
+                        <input type="radio" class="custom-radio" name="offer" id="4" value="consult">
                         <label for="4"></label>
                     </label>
                 </div>
                 <div class="order">
                     <div class="order__inner">
-                        <input type="text" class="order__field" placeholder="Name" required>
-                        <input type="email" class="order__field" placeholder="email@example.com" required>
-                        <textarea class="order__field order__comment" placeholder="Comments..."></textarea>
-                        <button class="btn" type="submit">Отправить</button>
+                        <input name="name" type="text" class="order__field" placeholder="Name" required>
+                        <input name="email" type="email" class="order__field" placeholder="email@example.com">
+                        <textarea name="comments" class="order__field order__comment"
+                            placeholder="Comments..."></textarea>
+                        <button id="submit" class="btn">Отправить</button>
                     </div>
                 </div>
-            </form>
+        </div>
+        </form>
         </div>
     </section>
 
@@ -156,11 +158,11 @@
                 <div class="footer__block">
                     <h3 class="footer__title">Контакты</h3>
                     <div class="footer__text">
-                        <div>Telegram: <a class="footer__link" href="https://t.me/mql_fx" target="_blank">@mql_fx</a>
+                        <div>Telegram: <a class="footer__link" href="https://t.me/" target="_blank">@example</a>
                         </div>
-                        <div>WhatsApp: +7 995 595 9002</div>
-                        <div><a href="mailto:contact@mqlfx.ru" class="footer__link">contact@mqlfx.ru</a></div>
-                        <div>+7 995 595 9002</div>
+                        <div>WhatsApp: +7 921 320 1586</div>
+                        <div><a href="mailto:anantchenko@yandex.ru" class="footer__link">anantchenko@yandex.ru</a></div>
+                        <div>+7 921 320 1586</div>
                     </div>
                 </div>
             </div>
@@ -169,7 +171,7 @@
         <div class="copyright">
             <div class="container">
                 <div class="copyright__text">
-                    <div>Copyright © 2020 MQLFX. All Rights Reserved.</div>
+                    <div>Copyright © 2020. All Rights Reserved.</div>
                     <div>Made with LOVE by Sanya & Vano.</div>
                     <div>Icons made by
                         <a class="footer__link" href="https://www.flaticon.com/authors/freepik" title="Freepik"
@@ -185,6 +187,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./main.js"></script>
+    <script src="./validation.js"></script>
 </body>
 
 </html>
